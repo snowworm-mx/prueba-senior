@@ -163,3 +163,155 @@ Se estima que el desarrollo de esta prueba puede tomar alrededor de **3 días**.
 ---
 
 **¡Éxito!**
+
+
+---
+
+***Implementación de funcionalidades de gestión de inventario***
+
+**Lista de Técnologías utilizadas**
+   * Laravel, php, mysql, laravel sanctum
+   * vue3, pinia, pinia persisted api, bootstrap
+
+***Instalación y configuración del Sistema***
+
+**Creación de la Base de datos**
+
+instalar xampp o laragon para tener un servidor de base de datos.
+dirigirnos al navegador a la siguiente url 127.0.0.1/phpmyadmin
+de ahí crear un abse de datos de nombre "gestion_inventario"
+<div align="center">
+   <div >
+      <img style="background-color: #000; display: inline-block; padding: 10px; border-radius: 8px;" width="500" src="assets/creacion_db.JPG" alt="Mailtrap">
+   </div>
+</div>
+<br>
+
+**Instalación de las librerias**
+
+El sistema cuenta de 2 partes la parte backend y la parte frontend
+para configurar el backend nos dirigimos a la carapeta backend-gestion-inventario y ejecutamos el comando "composer install" para descargar todas las librerias: 
+<br>
+composer install
+
+<br>
+Buscamos el archivo .env.example y lo renombramos por .env<br>
+dentro del archivo .env configuramos las lineas de la base de datos
+<br><br>
+DB_CONNECTION=mysql<br>
+DB_HOST=127.0.0.1<br>
+DB_PORT=3306<br>
+DB_DATABASE=gestion_inventario<br>
+DB_USERNAME=root<br>
+DB_PASSWORD=<br>
+<br>
+Ademas agragremos las sisguientes lineas para la configuracion de laravel sanctum:
+<br><br>
+SESSION_DRIVER=cookie<br>
+SESSION_DOMAIN=localhost<br>
+SANCTUM_STATEFUL_DOMAINS=http://localhost:5173<br>
+<br>
+
+**Generamos la key de la aplicacion**
+
+Para generar la clave de la aplicación tenemos que ejecutar el sisguiente comando:
+php artisan key:generate
+<br>
+
+**Generacion de las tables de la aplicacion**
+
+Para generar las tablas de la aplicación ejecutamos el comando:
+php artisan migrate
+
+**Precargar datos en la DB**
+
+Para generar los datos de prueba en la base de datos ejecutamos el siguiente comando:
+php artisan db:seed
+
+<br>
+Este comando nos va a llenar la tabla de productos<br>
+Tambien nos va a generar un usuario cuyo usuario es : jose@correo.com y un password:
+12345678
+<br>
+<br>
+
+**Configuración de Mailtrap**
+<br />
+Para configurar Mailtrap en laravel, necesitamos crear una cuenta en https://mailtrapio/. Un vez creada la cuenta nos dirigimos a Inboxes>My Inbox y nos aparecera la siguiente información:
+
+<div align="center">
+   <div >
+      <img style="background-color: #000; display: inline-block; padding: 10px; border-radius: 8px;" width="500" src="assets/config_mailtrap.JPG" alt="Mailtrap">
+   </div>
+</div>
+<br>
+De ahi nos dirigimos al archivo .env dentro de la carpeta backend-gestion-inventario
+y reemplazamos estas lineas:
+<br><br>
+MAIL_MAILER=smtp<br>
+MAIL_HOST=sandbox.smtp.mailtrap.io<br>
+MAIL_PORT=2525<br>
+MAIL_USERNAME=7cb431817e7275<br>
+MAIL_PASSWORD=********1b97<br>
+<br>
+Y ya tendremos listo nuestra configuración de Mailtrap.
+<br><br>
+Por ultimo corremos el comando: php artisan serve
+para levamntar el servidor
+
+**Configuracion Frontend**
+
+Nos dirigimos a la carapeta frontend-gestion-inventario y ejecutamos el siguiente comando: npm install
+<br>
+Para correr el frontend ejecutamos el comando: npm run dev
+
+---
+
+***Autenticación del Sistema***
+
+Ingresamos a l sistema con el usuario y password generados
+<div align="center">
+   <div >
+      <img style="background-color: #000; display: inline-block; padding: 10px; border-radius: 8px;" width="500" src="assets/login.JPG" alt="Snowworm Logo">
+   </div>
+</div>
+<br>
+
+***CRUD de Productos***
+
+Una vez ingresado al sistema nos va a redirigir a la siguiente pagina, que es el listado de productos.
+<div align="center">
+   <div >
+      <img style="background-color: #000; display: inline-block; padding: 10px; border-radius: 8px;" width="500" src="assets/lista_productos.JPG" alt="Snowworm Logo">
+   </div>
+   <br>
+   Para agregar un nuevo producto presionamos el botón Nuevo, que nos abrira una ventana modal para reguistrar el nuevo producto.
+   <div >
+      <img style="background-color: #000; display: inline-block; padding: 10px; border-radius: 8px;" width="500" src="assets/nuevo_producto.JPG" alt="Snowworm Logo">
+   </div>
+   <br>
+   <div >
+      <img style="background-color: #000; display: inline-block; padding: 10px; border-radius: 8px;" width="500" src="assets/alta_prodcuto.JPG" alt="Snowworm Logo">
+   </div>
+   <br>
+   Una vez que terminemos de agregar los adtaos del producto presionamos el botn guarar para su registro.
+   <div >
+      <img style="background-color: #000; display: inline-block; padding: 10px; border-radius: 8px;" width="500" src="assets/producto_registrado.JPG" alt="Snowworm Logo">
+   </div>
+   <br>
+   Para editar el producto presionamos el boton editar, el cual nos abrira una ventana modal similar a la de Nuevo producto y de igual manera presionamos el bton guardar para modificarlo.
+   <div >
+      <img style="background-color: #000; display: inline-block; padding: 10px; border-radius: 8px;" width="500" src="assets/editar_producto.JPG" alt="Snowworm Logo">
+   </div>
+   <br>
+   Si la casntidad de producto es igual o menor a 3 nos enviara un correo electronico de alerta indicandonos el bajo inventario.
+   <div >
+      <img style="background-color: #000; display: inline-block; padding: 10px; border-radius: 8px;" width="500" src="assets/alerta_inventario_bajo.JPG" alt="Snowworm Logo">
+   </div>
+   <br>
+   Por ultimo para eliminar el producto presionamos el boton eliminar, nos abrira un confirm y seleccionamos aceptar.
+   <div >
+      <img style="background-color: #000; display: inline-block; padding: 10px; border-radius: 8px;" width="500" src="assets/eliminar_producto.JPG" alt="Snowworm Logo">
+   </div>
+   <br>
+</div>
