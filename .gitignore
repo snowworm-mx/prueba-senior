@@ -1,0 +1,4 @@
+backend-gestion-inventario/.env
+backend-gestion-inventario/vendor/*
+frontend-gestion-inventario/node_modules/*
+frontend-gestion-inventario/.env

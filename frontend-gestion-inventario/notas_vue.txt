@@ -1,0 +1,7 @@
+
+//instalamos estas librerias
+npm i bootstrap axios 
+npm i @fortawesome/fontawesome-free 
+npm i sweetalert2 vue-chartjs chart.js 
+npm i datatables.net-vue3 datatables.net datatables.net-responsive-dt datatables.net-buttons 
+npm i jszip pdfmake pinia-plugin-persistedstate vuejs-paginate-next
