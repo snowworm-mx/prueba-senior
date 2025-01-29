@@ -230,7 +230,13 @@ php artisan db:seed
 
 <br>
 Este comando nos va a llenar la tabla de productos<br>
-Tambien nos va a generar un usuario cuyo usuario es : jose@correo.com y un password:
+Tambien nos va a generar 2 usuarios: <br>
+admin:<br>
+jose@correo.com
+12345678
+<br>
+usuario normal<br>
+alexis@correo.com
 12345678
 <br>
 <br>
@@ -267,12 +273,37 @@ Para correr el frontend ejecutamos el comando: npm run dev
 
 ---
 
+
+***Página de Inicio***
+
+Página de Inicio
+<div align="center">
+   <div >
+      <img style="background-color: #000; display: inline-block; padding: 10px; border-radius: 8px;" width="500" src="assets/home.JPG" alt="Snowworm Logo">
+   </div>
+</div>
+<br>
+
 ***Autenticación del Sistema***
 
 Ingresamos a l sistema con el usuario y password generados
 <div align="center">
    <div >
       <img style="background-color: #000; display: inline-block; padding: 10px; border-radius: 8px;" width="500" src="assets/login.JPG" alt="Snowworm Logo">
+   </div>
+</div>
+<br>
+Sino, recordamos la contraseña podemos restablecerla en esta pagina.
+<div align="center">
+   <div >
+      <img style="background-color: #000; display: inline-block; padding: 10px; border-radius: 8px;" width="500" src="assets/forgot-password.JPG" alt="Snowworm Logo">
+   </div>
+</div>
+<br>
+Nos enviara un correo electrronio con el nuevo password
+<div align="center">
+   <div >
+      <img style="background-color: #000; display: inline-block; padding: 10px; border-radius: 8px;" width="500" src="assets/new-pass.JPG" alt="Snowworm Logo">
    </div>
 </div>
 <br>
@@ -315,3 +346,80 @@ Una vez ingresado al sistema nos va a redirigir a la siguiente pagina, que es el
    </div>
    <br>
 </div>
+
+***CRUD PEDIDOS***
+Listado de pedidos
+<div align="center">
+   <div >
+      <img style="background-color: #000; display: inline-block; padding: 10px; border-radius: 8px;" width="500" src="assets/lista_pedidos.JPG" alt="Snowworm Logo">
+   </div>
+</div>
+<br>
+
+Nuevo Pedido
+<div align="center">
+   <div >
+      <img style="background-color: #000; display: inline-block; padding: 10px; border-radius: 8px;" width="500" src="assets/nuevo_pedido.JPG" alt="Snowworm Logo">
+   </div>
+</div>
+<br>
+
+Editar Pedido
+<div align="center">
+   <div >
+      <img style="background-color: #000; display: inline-block; padding: 10px; border-radius: 8px;" width="500" src="assets/editar_pedido.JPG" alt="Snowworm Logo">
+   </div>
+</div>
+<br>
+
+Cambio de Estado
+<div align="center">
+   <div >
+      <img style="background-color: #000; display: inline-block; padding: 10px; border-radius: 8px;" width="500" src="assets/cambiar_estado.JPG" alt="Snowworm Logo">
+   </div>
+</div>
+<br>
+
+Correo Cambio de Estado
+<div align="center">
+   <div >
+      <img style="background-color: #000; display: inline-block; padding: 10px; border-radius: 8px;" width="500" src="assets/cambio_estado_mailable.JPG" alt="Snowworm Logo">
+   </div>
+</div>
+<br>
+
+**Historial de Movimientos**
+
+Se registran los aumento o disminiciones de inventario.
+<div align="center">
+   <div >
+      <img style="background-color: #000; display: inline-block; padding: 10px; border-radius: 8px;" width="500" src="assets/historial_movimientos.JPG" alt="Snowworm Logo">
+   </div>
+</div>
+<br>
+
+**Alta de nuevo usuario**
+
+Solo el admin puede crear nuevos usuarios
+<div align="center">
+   <div >
+      <img style="background-color: #000; display: inline-block; padding: 10px; border-radius: 8px;" width="500" src="assets/registro.JPG" alt="Snowworm Logo">
+   </div>
+</div>
+<br>
+
+**Perfil**
+
+Perfil de usuario donde podra cambiar su contraseña
+<div align="center">
+   <div >
+      <img style="background-color: #000; display: inline-block; padding: 10px; border-radius: 8px;" width="500" src="assets/perfil.JPG" alt="Snowworm Logo">
+   </div>
+</div>
+<br>
+<div align="center">
+   <div >
+      <img style="background-color: #000; display: inline-block; padding: 10px; border-radius: 8px;" width="500" src="assets/cambiar_password.JPG" alt="Snowworm Logo">
+   </div>
+</div>
+<br>
