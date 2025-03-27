@@ -20,12 +20,13 @@ El objetivo de esta prueba es evaluar la capacidad del candidato para diseñar e
 
 ### Funcionalidades Principales
 
-1. **Autenticación y Roles de Usuario**
+1. **Autenticación y Seguridad**
 
-   - Implementar un sistema de autenticación utilizando Laravel Sanctum.
+   - Implementar un sistema de autenticación utilizando OAuth 2.0 con Laravel Passport.
    - Crear roles configurables (e.g., Admin, Usuario Básico).
    - Proteger rutas de la API según los roles de usuario.
-   - Implementar recuperación de contraseña mediante tokens y correo electrónico.
+   - Implementar TOTP (Time-based One-Time Password) para autenticación de dos factores.
+   - Limitar intentos de login por usuario con rate limiting en Laravel.
 
 2. **Gestión de Productos con Control de Inventarios Avanzado**
 
@@ -51,7 +52,9 @@ El objetivo de esta prueba es evaluar la capacidad del candidato para diseñar e
      - Estado del pedido (Pendiente, Procesado, Completado, Cancelado).
      - Fecha de creación y última actualización.
    - Enviar un correo electrónico de confirmación al usuario cuando el pedido cambie de estado.
+   - Procesamiento asíncrono de pedidos usando colas y jobs en Laravel.
    - Aumentar la cantidad de productos en inventario cuando se complete un pedido.
+   - Soporte para Multi-Tenancy, donde cada empresa tenga su propio inventario separado.
 
 4. **Frontend con React Native**
 
@@ -66,8 +69,19 @@ El objetivo de esta prueba es evaluar la capacidad del candidato para diseñar e
      - Crear, editar y eliminar productos.
      - Gestionar inventarios con historial de movimientos.
      - Consultar y gestionar pedidos, incluyendo su cambio de estado.
-   - Gestionar el estado de la aplicación utilizando **MobX-State-Tree** o **Redux**.
+   - Opcional: Implementar GraphQL en vez de REST para mejorar la eficiencia en el consumo de la API.
+   - Implementar internacionalización (i18n) en el frontend.
+   - Opcional: Incluir un modo offline en el frontend.
    - En caso de no utilizar React Native, se puede emplear otra tecnología o método para el frontend, explicando en el archivo `README.md` los motivos de la elección.
+
+5. **Eventos en Tiempo Real**
+
+   - Agregar WebSockets para actualizaciones en tiempo real en el frontend cuando se modifiquen pedidos o inventario.
+
+6. **Optimización y Performance**
+
+   - Agregar cacheo avanzado con Redis para consultas frecuentes de productos e inventario.
+   - Implementar lazy loading y eager loading en Eloquent para optimizar consultas.
 
 ---
 
